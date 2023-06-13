@@ -14,8 +14,9 @@
 </head>
 <body>
 <%@ include file="/partials/navbar.jsp" %>
-
+<div class = "container-fluid">
 <h1>Login</h1>
+</div>
 <form method="post" action="login.jsp">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required><br><br>

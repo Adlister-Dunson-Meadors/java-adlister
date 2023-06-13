@@ -14,8 +14,9 @@
 </head>
 <body>
 <%@ include file="/partials/navbar.jsp" %>
-
-<h1>Welcome to your profile!</h1>
-<p>This is your profile page.</p>
+<div class = "container-fluid">
+    <h1>Welcome to your profile!</h1>
+    <p>This is your profile page.</p>
+</div>
 </body>
 </html>
