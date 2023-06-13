@@ -25,7 +25,5 @@
 
     <input type="submit" value="Login">
 </form>
-
-<%@ include file="/partials/footer.jsp" %>
 </body>
 </html>
