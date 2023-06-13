@@ -17,7 +17,5 @@
 
 <h1>Welcome to your profile!</h1>
 <p>This is your profile page.</p>
-
-<%@ include file="/partials/footer.jsp" %>
 </body>
 </html>
