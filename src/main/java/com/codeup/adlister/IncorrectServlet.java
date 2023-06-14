@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/incorrectServlet")
+@WebServlet("/incorrect")
 public class IncorrectServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

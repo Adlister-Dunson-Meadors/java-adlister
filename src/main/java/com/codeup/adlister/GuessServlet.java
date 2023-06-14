@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/guessServlet")
+@WebServlet("/guess")
 public class GuessServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -16,9 +16,9 @@ public class GuessServlet extends HttpServlet {
         int randomNumber = (int) (Math.random() * 3) + 1;
 
         if (guess == randomNumber) {
-            response.sendRedirect(request.getContextPath() + "/correct");
+            response.sendRedirect(request.getContextPath() + "/correct.jsp");
         } else {
-            response.sendRedirect(request.getContextPath() + "/incorrect");
+            response.sendRedirect(request.getContextPath() + "/incorrect.jsp");
         }
     }
 }
