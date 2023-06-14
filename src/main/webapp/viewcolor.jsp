@@ -17,6 +17,6 @@
 </head>
 <body>
 <h1>View Color</h1>
-<p>The background color is <%= request.getParameter("color") %>.</p>
+<p>The background color is <%= request.getParameter("color")%>.</p>
 </body>
 </html>
