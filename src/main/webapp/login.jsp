@@ -21,7 +21,6 @@
     <input type="password" name="password" id="password">
     <button type="submit">Submit</button>
 </form>
-
 <c:if test="${param.username.equals('admin') && param.password.equals('password')}">
     <meta http-equiv="Refresh" content="0; url='/profile.jsp'" />
 </c:if>
