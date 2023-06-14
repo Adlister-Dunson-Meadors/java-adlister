@@ -12,6 +12,7 @@
     <title>Login</title>
 </head>
 <body>
+<%@ include file="/partials/navbar.jsp" %>
 <h1>Login</h1>
 <form method="post">
     <label for="username">Username:</label>
