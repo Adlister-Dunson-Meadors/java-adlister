@@ -11,7 +11,7 @@
 </head>
 <body>
 <h1>Pick a Color</h1>
-<form action="pick-color" method="POST">
+<form action="pickAColor.jsp" method="POST">
     <label for="color">Favorite Color:</label>
     <input type="text" id="color" name="color">
     <br>
