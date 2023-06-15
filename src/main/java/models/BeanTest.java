@@ -15,7 +15,7 @@ public class BeanTest {
         ArrayList<Quote> quotes = new ArrayList<>();
         Author franklin = new Author(1, "Franklin D.", "Roosevelt");
 
-       Quote firstQuote = new Quote(1, "The only thing we have to fear is fear itself.", franklin);
+        Quote firstQuote = new Quote(1, "The only thing we have to fear is fear itself.", franklin);
 
     }
 }
