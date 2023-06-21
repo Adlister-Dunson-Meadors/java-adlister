@@ -1,3 +1,7 @@
+package com.codeup.adlister.dao;
+
+import com.codeup.adlister.models.Ad;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +15,7 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 
+    @Override
     public Long insert(Ad ad) {
         // make sure we have ads
         if (ads == null) {
