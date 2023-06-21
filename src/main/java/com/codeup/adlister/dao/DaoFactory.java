@@ -10,4 +10,11 @@ public class DaoFactory {
         }
         return adsDao;
     }
+
+    public static Products getProductsDao(){
+        if(productsDao == nulll){
+            productsDao = (Products) new MySQLProdictsDao(config);
+        }
+        return productsDao;
+    }
 }
