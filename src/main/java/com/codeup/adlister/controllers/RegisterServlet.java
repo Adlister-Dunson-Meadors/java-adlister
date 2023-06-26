@@ -35,10 +35,7 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
-        // create and save a new user
         User user = new User(username, email, password);
-
-        // hash the password
 
         String hash = Password.hash(user.getPassword());
 
