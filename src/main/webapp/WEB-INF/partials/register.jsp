@@ -12,7 +12,7 @@
 </head>
 <body>
 <h2>User Registration</h2>
-<form action="register" method="post">
+<form action="/register" method="post">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required><br><br>
 
