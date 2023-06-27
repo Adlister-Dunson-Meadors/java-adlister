@@ -31,7 +31,6 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-
         boolean validAttempt = Password.check(password, user.getPassword());
 
         if (validAttempt) {
@@ -40,6 +39,5 @@ public class LoginServlet extends HttpServlet {
         } else {
             response.sendRedirect("/login");
         }
-
     }
 }

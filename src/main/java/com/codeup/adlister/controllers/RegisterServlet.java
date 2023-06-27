@@ -24,7 +24,6 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
 
-        // validate input
         boolean inputHasErrors = username.isEmpty()
                 || email.isEmpty()
                 || password.isEmpty()
@@ -38,7 +37,6 @@ public class RegisterServlet extends HttpServlet {
         User user = new User(username, email, password);
 
         String hash = Password.hash(user.getPassword());
-
         user.setPassword(hash);
 
         DaoFactory.getUsersDao().insert(user);
