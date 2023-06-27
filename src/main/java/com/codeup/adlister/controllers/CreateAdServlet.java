@@ -19,14 +19,14 @@ public class CreateAdServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("user");//post add grab user opbject
 
-        if (user == null){
+        if (user == null){//no ones logged
             response.sendRedirect("/login");
             return;
         }
         Ad ad = new Ad(
-                user.getId(), // for now we'll hardcode the user id
+                user.getId(),
             request.getParameter("title"),
             request.getParameter("description")
         );

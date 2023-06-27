@@ -19,6 +19,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/profile");
             return;
         }
+       // request.
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
@@ -31,15 +32,13 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-
         boolean validAttempt = Password.check(password, user.getPassword());
 
         if (validAttempt) {
-            request.getSession().setAttribute("user", user);
+            request.getSession().setAttribute("user", user);//stores the user who logged in, stores in session
             response.sendRedirect("/profile");
         } else {
             response.sendRedirect("/login");
         }
-
     }
 }
