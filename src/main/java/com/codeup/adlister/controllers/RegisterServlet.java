@@ -18,16 +18,35 @@ public class RegisterServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String username = request.getParameter("username");
+        //-------------------------------------------------------------------------------------------------------------
+        //checking the username of user
+        User userCheck = DaoFactory.getUsersDao().findByUsername(username);
+
+        if (userCheck != null) {
+            request.setAttribute("message", "Username is taken");
+            request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
+            return;
+        }
+
         String email = request.getParameter("email");
+
         String password = request.getParameter("password");
+        boolean isValid = password.length() >= 8  && password.matches("(?=.*[A-Z])(?=.*\\d).*");
+
+        if (isValid == false){
+            request.setAttribute("message", "Your password has to to be 8 characters, a capital letter and a number");
+            request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
+            return;
+        }
+
         String passwordConfirmation = request.getParameter("confirm_password");
 
         boolean inputHasErrors = username.isEmpty()
                 || email.isEmpty()
                 || password.isEmpty()
-                || (! password.equals(passwordConfirmation));
+                || (!password.equals(passwordConfirmation));
         if (inputHasErrors) {
             response.sendRedirect("/register");
             return;
@@ -39,5 +58,7 @@ public class RegisterServlet extends HttpServlet {
 
         DaoFactory.getUsersDao().insert(user);
         response.sendRedirect("/login");
+
+
     }
 }

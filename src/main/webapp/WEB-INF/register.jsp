@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,6 +15,12 @@
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
             </div>
+            <c:if test="${message != null}">
+                <div class="alert">
+                    <p>${message}</p>
+
+                </div>
+            </c:if>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input id="email" name="email" class="form-control" type="text">
@@ -29,5 +36,14 @@
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
+
+    <script>
+        setTimeout(function() {
+            var alertDiv = document.querySelector('.alert');
+            if (alertDiv) {
+                alertDiv.style.display = 'none';
+            }
+        }, 3000);
+    </script>
 </body>
 </html>

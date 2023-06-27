@@ -19,9 +19,9 @@ public class CreateAdServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("user");//post add grab user opbject
 
-        if (user == null){
+        if (user == null){//no ones logged
             response.sendRedirect("/login");
             return;
         }
