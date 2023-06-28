@@ -21,9 +21,6 @@
     <p>${user.username}</p>
 <%--    <p>${user.email}</p>--%>
 </div>
-<div class="deletebutton">
-
-</div>
 
 </body>
 </html>

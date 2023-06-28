@@ -27,6 +27,7 @@
             <div class="col-md-4 mb-4">
                 <h2>${ad.title}</h2>
                 <button type="button" class="btn btn-secondary"><a href="/ads?id=${ad.id}">View more</a></button>
+                <button type="button" class="delete-button btn btn-secondary"><a href="/delete/${ad.id}">Delete</a></button>
             </div>
         </c:forEach>
     </div>
