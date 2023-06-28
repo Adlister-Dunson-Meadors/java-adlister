@@ -16,6 +16,7 @@
         <div class="col-md-6">
             <h2>${ad.title}</h2>
             <button type="button"><a href="/ads?id=${ad.id}">View more</a></button>
+            <button type="button"><a href="">Delete</a></button>
         </div>
     </c:forEach>
 </div>
