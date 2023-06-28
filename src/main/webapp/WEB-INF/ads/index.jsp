@@ -10,10 +10,15 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="d-flex flex-row">
         <div class="col-md-6">
-
             <button type="button"><a href="/ads/create">Add Ads</a></button>
+            <div class="d-flex">
+            <form class="d-flex justify-content-end" action="/search" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            </div>
         </div>
     </div>
 

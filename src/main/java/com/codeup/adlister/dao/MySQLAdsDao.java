@@ -80,6 +80,19 @@ public class MySQLAdsDao implements Ads {
 
 
     @Override
+    public List<Ad> fetchByTitle(String title) {
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE title LIKE ?");
+            stmt.setString(1, "%" + title + "%");
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ad Title.", e);
+        }
+    }
+
+    @Override
     public boolean removeById(Long id){
         PreparedStatement stmt = null;
         try {
@@ -91,11 +104,6 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error deleting Ad.", e);
         }
     }
-
-//    @Override
-//    public boolean editById(Long id) {
-//        return false;
-//    }
 
 
     public boolean updateByTitle(Long id, String updatedTitle){

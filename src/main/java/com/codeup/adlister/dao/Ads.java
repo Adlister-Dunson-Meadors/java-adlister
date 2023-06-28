@@ -13,6 +13,9 @@ public interface Ads {
 
     List<Ad> fetchByUserId(Long id);
 
+    List<Ad> fetchByTitle(String title);
+
+
     boolean removeById(Long id);
     boolean updateByTitle(Long id, String updatedTitle);
     boolean updateByDescription(Long id, String updatedDescription);
