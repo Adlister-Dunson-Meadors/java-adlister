@@ -12,8 +12,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-        <button type="button"><a href="/ads/create">Add Ads</a></button>
-    </div>
+            <button type="button"><a href="/ads/create">Add Ads</a></button>
+        </div>
     </div>
 
     <div class="row justify-content-center">
