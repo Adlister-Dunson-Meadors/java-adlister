@@ -30,6 +30,11 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
+    public Ad fetchByUserId(Long id) {
+        return null;
+    }
+
+    @Override
     public boolean removeById(Long id) {
         return true;
     }

@@ -10,7 +10,11 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
     Ad fetchById(Long id);
+
+    Ad fetchByUserId(Long id);
+
     boolean removeById(Long id);
     boolean updateByTitle(Long id, String updatedTitle);
     boolean updateByDescription(Long id, String updatedDescription);
+
 }
