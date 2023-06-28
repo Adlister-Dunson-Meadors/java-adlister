@@ -24,6 +24,6 @@
     </div>
         </div>
     </div>
-    <a href="/ads">Go back to the Ad Listing</a>
+    <footer> <a href="/ads">Go back to the Ad Listing</a></footer>
 </body>
 </html>

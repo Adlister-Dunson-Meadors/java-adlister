@@ -36,7 +36,6 @@
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
-    <a href="/ads">Go back to the Ad Listing</a>
 
     <script>
         setTimeout(function() {
@@ -46,5 +45,6 @@
             }
         }, 3000);
     </script>
+    <footer> <a href="/ads">Go back to the Ad Listing</a></footer>
 </body>
 </html>
