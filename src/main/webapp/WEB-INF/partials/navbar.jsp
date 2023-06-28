@@ -4,6 +4,10 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Ad Listings</a>
+            <form class="d-flex" action="/search" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
         <ul class="nav navbar-nav navbar-right">
             <c:if test="${sessionScope.user != null}">

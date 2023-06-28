@@ -11,6 +11,6 @@
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
-
+    <a href="/ads">Go back to the Ad Listing</a>
 </body>
 </html>

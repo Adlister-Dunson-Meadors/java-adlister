@@ -20,5 +20,6 @@
     <input type="submit" class="btn btn-block btn-primary">
   </form>
 </div>
+<a href="/ads">Go back to the Ad Listing</a>
 </body>
 </html>

@@ -27,5 +27,7 @@
     </div>
 </div>
 
+<a href="/ads">Go back to the Ad Listing</a>
+
 </body>
 </html>

@@ -21,4 +21,5 @@
         </form>
     </div>
 </body>
+<a href="/ads">Go back to the Ad Listing</a>
 </html>
