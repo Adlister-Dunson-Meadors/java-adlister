@@ -11,7 +11,7 @@ public interface Ads {
     Long insert(Ad ad);
     Ad fetchById(Long id);
 
-    Ad fetchByUserId(Long id);
+    List<Ad> fetchByUserId(Long id);
 
     boolean removeById(Long id);
     boolean updateByTitle(Long id, String updatedTitle);
