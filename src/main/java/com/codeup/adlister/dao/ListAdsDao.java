@@ -34,6 +34,16 @@ public class ListAdsDao implements Ads {
         return true;
     }
 
+    @Override
+    public boolean updateByTitle(Long id, String updatedTitle) {
+        return false;
+    }
+
+    @Override
+    public boolean updateByDescription(Long id, String updatedDescription) {
+        return false;
+    }
+
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();

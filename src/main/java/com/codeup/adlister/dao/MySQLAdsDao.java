@@ -3,9 +3,6 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -79,6 +76,38 @@ public class MySQLAdsDao implements Ads {
             return rs==1;
         } catch (SQLException e) {
             throw new RuntimeException("Error deleting Ad.", e);
+        }
+    }
+
+//    @Override
+//    public boolean editById(Long id) {
+//        return false;
+//    }
+
+
+    public boolean updateByTitle(Long id, String updatedTitle){
+        PreparedStatement stmt = null;
+        try{
+            stmt = connection.prepareStatement("UPDATE ads SET title = ? WHERE id = ?");
+            stmt.setString(1, updatedTitle);
+            stmt.setLong(2, id);
+            int rs = stmt.executeUpdate();
+            return rs==1;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error Editing Ad.", e);
+        }
+    }
+
+    public boolean updateByDescription(Long id, String updatedDescription){
+        PreparedStatement stmt = null;
+        try{
+            stmt = connection.prepareStatement("UPDATE ads SET description = ? WHERE id = ?");
+            stmt.setString(1, updatedDescription);
+            stmt.setLong(2, id);
+            int rs = stmt.executeUpdate();
+            return rs==1;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error Editing Ad.", e);
         }
     }
 

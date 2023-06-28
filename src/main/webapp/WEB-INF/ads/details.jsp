@@ -15,11 +15,16 @@
 
 <body>
 <%--<form action="/ads/details" method="post">--%>
-<div class="col-md-6">
-    <h2>${ad.title}</h2>
-    <p>${ad.description}</p>
-    <p>${user.username}</p>
-<%--    <p>${user.email}</p>--%>
+<div class="container">
+    <div class="col-md-6">
+        <h2>${ad.title}</h2>
+        <p>${ad.description}</p>
+        <p>${user.username}</p>
+    <%--    <p>${user.email}</p>--%>
+    </div>
+    <div class="col-md-6">
+        <button type="button"><a href="/edit/${ad.id}">Edit this Ad</a></button>
+    </div>
 </div>
 
 </body>

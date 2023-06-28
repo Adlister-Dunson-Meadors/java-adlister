@@ -11,4 +11,6 @@ public interface Ads {
     Long insert(Ad ad);
     Ad fetchById(Long id);
     boolean removeById(Long id);
+    boolean updateByTitle(Long id, String updatedTitle);
+    boolean updateByDescription(Long id, String updatedDescription);
 }

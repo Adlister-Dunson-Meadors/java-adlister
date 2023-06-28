@@ -18,10 +18,6 @@ public class AdsIndexServlet extends HttpServlet {
             request.setAttribute("ad", DaoFactory.getAdsDao().fetchById(Long.parseLong(id)));
             request.getRequestDispatcher("/WEB-INF/ads/details.jsp").forward(request, response);
         }
-//        else if (){
-//            request.setAttribute("ad", DaoFactory.getAdsDao().removeById(Long.parseLong(id)));
-//            request.getRequestDispatcher("/WEB-INF/ads/details.jsp").forward(request, response);
-//        }
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
     }
